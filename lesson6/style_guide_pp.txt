@@ -1,0 +1,56 @@
+1.
+
+var title = "The Three-Body Problem";
+
+// should use single quotes for strs
+
+
+2.
+
+var title = 'The Three-Body Problem',
+    author = 'Cixin Liu',
+    page_count = 400;
+
+// should use sep var statement for each var
+// should use camelCase for var names
+
+
+3.
+
+var completed = lastPageRead == 400;
+
+// should use braces around complex assignment exprs
+// should always use the strict equality op '==='
+
+
+4.
+
+if (finishedBook())
+  console.log('You have finished reading this book');
+
+// should use single-line if statement, or use braces
+
+
+5.
+
+function read(pages) {
+      console.log('You started reading.');
+      for (var i=0; i<pages; i++) {
+              var message = 'You read page '+i;
+              console.log(message);
+      }
+}
+
+read(400);
+
+// should indent 2 spaces
+// should have 1 space before and after '=' sign in initialization statement
+// should have 1 space before and after '<' sign in conditional test
+// should have 1 space before and after '+' sign in assignment
+// should use explicit coercion when converting 'i' to str
+// should declare all vars at the top of a fn
+"the guide also recommends using named function expressions instead of function declarations:
+var read = function read(pages) {
+  ...
+}" // ... pointless
+

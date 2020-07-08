@@ -1,0 +1,23 @@
+1.
+var x = '13';
+var y = 9;
+
+// console.log(x + y); // y is implicitly coerced to a String
+console.log(Number(x) + y); // x is explicitly coerced to a Number
+
+alt from solution:
+console.log(parseInt(x, 10) + y);
+
+2.
+var x = '13';
+var y = 9;
+
+console.log(x * y); // 117; x is implicitly coerced to a Number
+
+3. and 4.
+var npa = 212;
+var nxx = 555;
+var num = 1212;
+
+console.log(String(npa) + String(nxx) + String(num));
+

@@ -1,0 +1,37 @@
+1.
+let numerator = 10;
+
+2.
+let denominator = 2;
+
+3.
+console.log(numerator/denominator);
+
+4.
+let incrementor = 1;
+
+5.
+let start = incrementor;
+
+6.
+let end;
+let difference;
+
+7.
+incrementor += 1;
+incrementor += 1;
+incrementor += 1;
+
+8.
+incrementor++;
+incrementor++;
+
+9.
+end = incrementor;
+difference = end - start;
+console.log(end, difference);
+
+10.
+let answer = (11 + 31) * 3;
+console.log(answer);
+
