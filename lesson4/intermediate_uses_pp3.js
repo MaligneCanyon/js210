@@ -1,5 +1,6 @@
 function backAndForth(arr) {
   return arr.concat(arr.slice().reverse());
+  // return [...arr, ...(arr.reverse())];
 }
 
 let arr = [1, 2, 3, 4];

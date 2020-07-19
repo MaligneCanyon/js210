@@ -9,8 +9,10 @@ function pop(arr) {
 }
 
 var count = [1, 2, 3];
+var c2 = count;
 console.log(pop(count));             // 3
 console.log(count);                  // [ 1, 2 ]
+console.log(c2);                     // [ 1, 2 ] // changing arr.length mutates the arr
 
 count = [];
 console.log(pop(count));             // undefined

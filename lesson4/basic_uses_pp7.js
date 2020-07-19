@@ -8,5 +8,5 @@ function lastNOf(arr, count) {
 }
 
 var digits = [4, 8, 15, 16, 23, 42];
-console.log(pp6lastNOf(digits, 10)); // pp6 published Solution rtns [15, 16, 23, 42]
-console.log(lastNOf(digits, 10)); // this version rtns [4, 8, 15, 16, 23, 42]
+console.log(pp6lastNOf(digits, 10)); // pp6 published Solution rtns [15, 16, 23, 42]; incorrect
+console.log(lastNOf(digits, 10)); // this version rtns [4, 8, 15, 16, 23, 42]; correct

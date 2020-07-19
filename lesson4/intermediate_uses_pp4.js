@@ -1,5 +1,6 @@
 function sortDescending(arr) {
-  return arr.slice().sort(function(a, b) { return b - a; });
+  // return arr.slice().sort(function(a, b) { return b - a; });
+  return arr.slice().sort((a, b) => b - a);
 }
 
 var array = [23, 4, 16, 42, 8, 15];

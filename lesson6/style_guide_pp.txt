@@ -13,6 +13,7 @@ var title = 'The Three-Body Problem',
 
 // should use sep var statement for each var
 // should use camelCase for var names
+// page_count should be declared as a const and use SCREAMING_SNAKE_CASE
 
 
 3.
