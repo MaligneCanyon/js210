@@ -7,6 +7,7 @@ function isPrime(num) {
     // console.log(num, div);
     if (num % div === 0) return false;
   }
+
   return true;
 }
 

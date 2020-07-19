@@ -1,5 +1,5 @@
 // inputs:
-// - str, int, int
+// - str, int (start ndx), int (length in chars)
 // outputs:
 // - str
 // reqs:
@@ -20,14 +20,14 @@
 //     - append the str char to the newStr
 // - rtn the newStr
 
-function substr(str, start, size) {
+function substr(str, startNdx, length) {
   let newStr = '';
 
-  if (size > 0) {
-    if (start < 0) start += str.length;
-    for (let i = 0; i < size; i++) {
-      if (str[start + i] === undefined) break;
-      newStr += str[start + i];
+  if (length > 0) {
+    if (startNdx < 0) startNdx += str.length;
+    for (let i = 0; i < length; i++) {
+      if (str[startNdx + i] === undefined) break;
+      newStr += str[startNdx + i];
     }
   }
 

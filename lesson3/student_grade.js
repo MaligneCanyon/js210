@@ -3,18 +3,18 @@
 // outputs:
 // - str
 // reqs:
-// - obtain 3 ints from user input, calc the avg and output a letter (grade) rep''ing the avg
+// - obtain 3 ints from user input, calc the avg and output a letter (grade) representing the avg
 // rules:
 //     If the average score is greater than or equal to 90 then the grade is 'A'
 //     If the average score is greater than or equal to 70 and less than 90 then the grade is 'B'
 //     If the average score is greater than or equal to 50 and less than 70 then the grade is 'C'
 //     If the average score is less than 50 then the grade is 'F'
 // struct:
-// - numeric, str
+// - num, str
 // algo:
-// - init a counter to 0
+// - init a counter to 1
 // - init a total to 0
-// - while counter < 3
+// - while counter <= 3
 //   - obtain an input from the user
 //   - add the input to the total
 // - div the total by 3 to obtain the avg

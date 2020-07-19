@@ -24,7 +24,8 @@
 // - rtn the newStr
 
 function isUpperCaseLetter(char) {
-  return (char >= 'A' && char <= 'Z');
+  // return (char >= 'A' && char <= 'Z');
+  return /[A-Z]/.test(char);
 }
 
 function rot13(str) {
@@ -52,8 +53,8 @@ function rot13(str) {
   return newStr;
 }
 
-console.log(rot13('abcDEF'));
-console.log(rot13(rot13('abcDEF')));
+console.log(rot13('abcDEF')); // nopQRS
+console.log(rot13(rot13('abcDEF'))); // abcDEF
 
 console.log(rot13('Teachers open the door, but you must enter by yourself.'));
 // logs: Grnpuref bcra gur qbbe, ohg lbh zhfg ragre ol lbhefrys.

@@ -3,7 +3,7 @@
 // outputs:
 // - boolean
 // reqs:
-// - rtn true if one operands is truthy and the other falsy; otherwise, rtn false
+// - rtn true if one operand is truthy and the other falsy; otherwise, rtn false
 // rules:
 // - none
 // struct:

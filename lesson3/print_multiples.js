@@ -9,7 +9,7 @@
 // rules:
 // - the only multiple of 0 is 0 (and it's not odd)
 // - otherwise,
-//   the max multiple is Integer(100 / input) * input
+//   the max multiple is floor(100 / input) * input
 // - there will always be at least one multiple (the input int itself)
 // struct:
 // - numeric

@@ -9,32 +9,17 @@
 // struct:
 // - String
 // algo:
-// - if (searchStr === '') or (indexOf(str1, str2) === 0) rtn T; otherwise rtn F
+// - for each char in str2
+//   - if the char at the current ndx in str1 doesn't match the corresponding char in str2
+//     - rtn F
+// - rtn T (end of str2 reached and all chars match)
 
-function startsWith(str, searchStr) {
-  return (searchStr === '') || (indexOf(str, searchStr) === 0);
-}
-
-function indexOf(str1, str2) {
-  let ndx;
-  let found = false;
-
-  // str1 = abcde; str2 = def // only need to check up to and including the 'c' in str1
-  for (let i = 0; i <= (str1.length - str2.length); i++) {
-    if (str1[i] === str2[0]) { // maybe a match
-      ndx = i; // save the ndx
-      found = true;
-      for (let j = 1; j < str2.length; j++) { // compare subsequent chars of the two strs
-        if (str1[i + j] !== str2[j]) { // not a match
-          found = false;
-          break;
-        }
-      }
-      if (found) return ndx; // made it to the end of str2 and all str2 chars match
-    }
+function startsWith(str1, str2) {
+  for (let i = 0; i < str2.length; i++) {
+    if (str1[i] !== str2[i]) return false;
   }
 
-  return -1; // got to the 'c' and no match found
+  return true;
 }
 
 var str = 'We put comprehension and mastery above all else';

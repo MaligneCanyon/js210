@@ -2,7 +2,7 @@ function repeat(str, times) {
 
   if (times === 0) return '';
   // if (times < 0 || isNaN(times) || !times) return undefined; // doesn't work w/ (times === '  ')
-  if (times < 0 || (typeof(times) !== 'number') || !times) return undefined;
+  if (times < 0 || (typeof(times) !== 'number')) return undefined;
 
   let output = '';
   for (let i = 0; i < times; i++) {

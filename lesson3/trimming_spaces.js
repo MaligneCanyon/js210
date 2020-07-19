@@ -1,4 +1,4 @@
-// function trim(str) {
+// function trimLeading(str) {
 //   let newStr = '';
 //   let leadingBlank = true;
 
@@ -8,9 +8,11 @@
 //     if (!leadingBlank) newStr += str[i];
 //   }
 
-//   // strip trailing blanks
-//   str = newStr;
-//   newStr = '';
+//   return newStr;
+// }
+
+// function trimTrailing(str) {
+//   let newStr = '';
 //   let j = str.length - 1;
 
 //   // find the ndx of the last non-blank char
@@ -27,32 +29,22 @@
 // }
 
 function trimLeading(str) {
+  let i = 0;
   let newStr = '';
-  let leadingBlank = true;
 
   // strip leading blanks
-  for (let i = 0; i < str.length; i++) {
-    if (leadingBlank && str[i] !== ' ') leadingBlank = false;
-    if (!leadingBlank) newStr += str[i];
-  }
-
+  while (str[i] === ' ') i++;
+  for (; i < str.length; i++) newStr += str[i];
   return newStr;
 }
 
 function trimTrailing(str) {
+  let i = str.length - 1;
   let newStr = '';
-  let j = str.length - 1;
 
-  // find the ndx of the last non-blank char
-  for (; j >= 0; j--) {
-    if (str[j] !== ' ') break;
-  }
-
-  // copy chars up to and including the last non-blank char
-  for (let k = 0; k <= j; k++) {
-    newStr += str[k];
-  }
-
+  // strip trailing blanks
+  while (str[i] === ' ') i--;
+  for (; i >= 0; i--) newStr = str[i] + newStr;
   return newStr + '!'; // append an '!' to chk for trailing blanks
 }
 
