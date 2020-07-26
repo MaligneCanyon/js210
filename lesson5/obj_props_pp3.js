@@ -2,6 +2,7 @@ function copyProperties(obj1, obj2) {
   for (prop in obj1) {
     obj2[prop] = obj1[prop]; // copies native and prototype properties
   }
+  // Object.assign(obj2, obj1); // doesn't copy prototype properties
 
   // return Object.keys(obj1).length; // only counts native properties
   return Object.keys(obj2).length; // counts both native and prototype properties

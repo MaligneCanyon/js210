@@ -24,21 +24,14 @@
 function repeatedCharacters(str) {
   let obj = {};
 
-  // let char;
-  // for (let i = 0; i < str.length; i++) {
-  //   char = str[i].toLowerCase();
-  //   if (obj[char]) obj[char]++;
-  //   else obj[char] = 1;
-  // }
-
   str.toLowerCase().split('').forEach(char => {
     if (obj[char]) obj[char]++;
     else obj[char] = 1;
   });
 
   for (prop in obj) {
-    // if (obj.prop === 1) delete(obj.prop); // no; must use bracket notation; 'prop' is a var
-    if (obj[prop] === 1) delete(obj[prop]);
+    // if (obj.prop < 2) delete(obj.prop); // no; must use bracket notation; 'prop' is a var
+    if (obj[prop] < 2) delete(obj[prop]);
   }
 
   return obj;

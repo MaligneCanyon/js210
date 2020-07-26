@@ -1,7 +1,6 @@
 let today = new Date();
 
-function dateSuffix(date) {
-  let dayNum = date.getDate();
+function dateSuffix(dayNum) {
   let result = String(dayNum);
 
   switch (dayNum) {
@@ -39,11 +38,11 @@ function formattedMonth(date) {
 
 function formattedDate(date) {
   let dayNum = date.getDate();
-  console.log(`Today's date is ${formattedDay(date)}, ${formattedMonth(date)} ${dateSuffix(date)}`);
+  console.log(`Today's date is ${formattedDay(date)}, ${formattedMonth(date)} ${dateSuffix(dayNum)}`);
 }
 
 // pp6
-console.log(`Today's date is ${formattedDay(today)}, ${today.getMonth()} ${dateSuffix(today)}`);
+console.log(`Today's date is ${formattedDay(today)}, ${today.getMonth()} ${dateSuffix(today.getDate())}`);
 
 // pp8
 formattedDate(today);

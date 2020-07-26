@@ -1,5 +1,4 @@
-function dateSuffix(date) {
-  let dayNum = date.getDate();
+function dateSuffix(dayNum) {
   let result = String(dayNum);
 
   switch (dayNum) {
@@ -37,9 +36,9 @@ function formattedMonth(date) {
 
 function formattedDate(date) {
   let dayNum = date.getDate();
-  // console.log(`Today's date is ${formattedDay(date)}, ${formattedMonth(date)} ${dateSuffix(date)}`);
+  // console.log(`Today's date is ${formattedDay(date)}, ${formattedMonth(date)} ${dateSuffix(dayNum)}`);
   // Always logs "Today's date is ...", no matter what date obj is passed in; not v.useful
-  console.log(`The date is ${formattedDay(date)}, ${formattedMonth(date)} ${dateSuffix(date)}`);
+  console.log(`The date is ${formattedDay(date)}, ${formattedMonth(date)} ${dateSuffix(dayNum)}`);
 }
 
 let today = new Date();
