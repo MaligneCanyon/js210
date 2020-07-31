@@ -9,7 +9,6 @@ function suffix(num) {
 
   return result;
 }
-
 // for (let i = 0; i <= 100; i++) console.log(suffix(i));
 
 const NUMS = 6;

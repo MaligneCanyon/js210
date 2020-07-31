@@ -1,5 +1,5 @@
 // inputs:
-// - string
+// - str
 // outputs:
 // - boolean
 // reqs:
@@ -9,7 +9,7 @@
 // - case, punctuation, spaces do not matter
 // - ignore all non-alphanumeric chars
 // struct:
-// - string
+// - str
 // algo:
 // - convert the str to uppercase
 // - delete all non-alphanumeric chars from the str
@@ -29,7 +29,7 @@ function isPalindrome(str) {
 // }
 
 function isRealPalindrome(str) {
-  return isPalindrome(str.toUpperCase().replace(/[^A-Z0-9]/gi, ''));
+  return isPalindrome(str.toLowerCase().replace(/[^a-z0-9]/gi, ''));
 }
 
 console.log(isRealPalindrome('madam'));               // true

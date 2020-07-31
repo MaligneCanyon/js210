@@ -1,4 +1,5 @@
-// - string
+// inputs:
+// - str
 // outputs:
 // - boolean
 // reqs:
@@ -7,9 +8,9 @@
 // rules:
 // - case, punctuation, spaces must match in reverse order
 // struct:
-// - string
+// - str
 // algo:
-// - split the string into an arr
+// - split the str into an arr
 // - reverse the arr
 // - join the elems of the arr into a newStr
 // - rtn true if str == newStr

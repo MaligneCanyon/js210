@@ -4,10 +4,10 @@
 // outputs:
 // - print string
 // reqs:
-// - prompt for an age
+// - prompt for a current age
 // - prompt for a desired retirement age
-// - output a sting showing the current year and retirement year
-// - output a sting showing how many years of work to go
+// - output a string showing the current year and retirement year
+// - output a string showing how many years of work to go
 // rules:
 // - none
 // struct:
@@ -16,17 +16,19 @@
 // algo:
 // - prompt for an age
 // - prompt for a desired retirement age
-// - calc the number of years of work to go
 // - obtain the current year
+// - calc the number of years of work to go
 // - calc the retirement year
-// - output a sting showing the current year and retirement year
-// - output a sting showing how many years of work to go
+// - output a string showing the current year and retirement year
+// - output a string showing how many years of work to go
 
-let age = prompt('What is your age?');
-let retirement_age = prompt('At what age would you like to retire?');
-let years_to_go = retirement_age - age;
+rlSync = require('readline-sync');
+
+let age = rlSync.question('What is your age? ');
+let retirementAge = rlSync.question('At what age would you like to retire? ');
 let year = (new Date()).getFullYear();
-retirement_year = year + years_to_go;
+let yearsToGo = retirementAge - age;
 
-console.log(`It's ${year}. You will retire in ${retirement_year}.`);
-console.log(`You have only ${years_to_go} years of work to go!`);
+console.log();
+console.log(`It's ${year}. You will retire in ${yearsToGo + year}.`);
+console.log(`You have only ${yearsToGo} years of work to go!`);

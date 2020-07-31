@@ -1,39 +1,39 @@
 // inputs:
-// - string
+// - str
 // outputs:
-// - hash
+// - obj
 // reqs:
 // - take a space-sepd str as input
-// - rtn a hash listing the number of words of different sizes
+// - rtn a obj listing the number of words of different lengths
 //   - store the result as a k:v pair w/ format length:number
 // rules:
 // - str w/ >=1 word
 // - words are any substr not including a space
 // struct:
-// - array (to hold words)
+// - arr (to hold words), obj
 // algo:
-// - init a hash to {}
+// - init an obj to {}
 // - if the str is not empty
 //   - split the str into words
 //   - for each word
-//     - create a key for that word size
-//     - if the key does not exist, add the key to the hash (with value 1)
+//     - create a key for that word length
+//     - if the key does not exist, add the key to the obj (with value 1)
 //     - if the key does exist, increment the value for that key
-// - rtn the hash
+// - rtn the obj
 
 function wordSizes(str) {
-  let hsh = {};
+  let obj = {};
   let myKey;
 
   if (str) { // exclude empty strs
     str.split(' ').forEach(word => {
       myKey = word.length;
-      if (hsh[myKey]) hsh[myKey]++;
-      else hsh[myKey] = 1;
+      if (obj[myKey]) obj[myKey]++;
+      else obj[myKey] = 1;
     });
   }
 
-  return hsh;
+  return obj;
 }
 
 console.log(wordSizes('Four score and seven.'));                       // { "3": 1, "4": 1, "5": 1, "6": 1 }

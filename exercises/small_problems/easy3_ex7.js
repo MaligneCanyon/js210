@@ -1,28 +1,26 @@
 // inputs:
-// - arr
+// - arr (of ints)
 // outputs:
-// - arr
+// - arr (of ints)
 // reqs:
-// - rtn an arr w/ elems of the input arr replaced by a running total of the input arr elem values
+// - take an arr of ints
+// - rtn an arr of ints of the same length as input arr
+// - each rtn'd arr elem is a running total of the values in the input arr
 // rules:
 // - none
 // struct:
-// - arr, numeric
+// - arr
 // algo:
-// - init a total to arr[0]
-// - for each subsequent elem of the arr
+// - map a running total of elems in the input arr to a newArr
+// algo:
+// - init a total to 0
+// - for each elem of the arr
 //   - add the arr elem value to the total
-//   - replace the arr elem value w/ the total
-// - rtn the arr
+//   - map the total to the newArr
+// - rtn the newArr
 
 // function runningTotal(arr) {
-//   let total = arr[0];
-//   for (let i = 1; i < arr.length; i++) {
-//     total += arr[i];
-//     arr[i] = total;
-//   }
-
-//   return arr;
+//   return arr.map((elem, ndx) => arr.slice(0, ndx + 1).reduce((accum, elem) => accum + elem));
 // }
 
 function runningTotal(arr) {
