@@ -6,10 +6,10 @@
 // - split an array into 2 subarrays
 // - return the subarrays as a nested array
 // rules:
-// - if the array contains an odd number of elements, the mid elements
+// - if the array contains an odd number of elements, the mid element
 //   should be placed in the 1st subarray
 //   - [0,1,2,3,4] -> [[0,1,2], [3,4]]
-//   - [0,1,2,3]   -> [[0,1],   [3,4]]
+//   - [0,1,2,3]   -> [[0,1],   [2,3]]
 // struct:
 // - Array
 // algo:

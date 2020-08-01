@@ -1,6 +1,11 @@
+// algo:
+// - reduce the arr to a product total
+// - div the result by the num of arr elems
+// - round the result to 3 decimal places
+// - rtn the result
+
 function showMultiplicativeAverage(arr) {
-  let avg = arr.reduce((accum, elem) => accum * elem, 1) / arr.length;
-  return (avg).toFixed(3);
+  return (arr.reduce((accum, elem) => accum * elem, 1) / arr.length).toFixed(3);
 }
 
 console.log(showMultiplicativeAverage([3, 5]));                   // "7.500"

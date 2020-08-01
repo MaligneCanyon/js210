@@ -6,8 +6,6 @@ function countOccurrences(arr) {
     else obj[elem] = 1;
   });
 
-  // arr = Object.entries(obj);
-  // arr.forEach(subArr => console.log(`${subArr[0]} => ${subArr[1]}`));
   for (key in obj) console.log(`${key} => ${obj[key]}`);
 }
 

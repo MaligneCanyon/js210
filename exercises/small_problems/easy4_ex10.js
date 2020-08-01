@@ -1,6 +1,5 @@
 function average(arr) {
-  let avg = arr.reduce((accum, elem) => accum + elem, 0) / arr.length;
-  return Math.floor(avg);
+  return Math.floor(arr.reduce((accum, elem) => accum + elem) / arr.length);
 }
 
 console.log(average([1, 5, 87, 45, 8, 8]));       // 25

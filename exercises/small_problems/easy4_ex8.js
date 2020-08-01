@@ -1,7 +1,11 @@
+// algo:
+// - convert the num to a str
+// - split the str into an arr of chars
+// - map each char to its Number equiv
+// - rtn the mapped arr
+
 function digitList(num) {
-  let str = String(num);
-  let arr = str.split('');
-  return arr.map(elem => Number(elem));
+  return String(num).split('').map(Number);
 }
 
 console.log(digitList(12345));       // [1, 2, 3, 4, 5]
