@@ -7,7 +7,7 @@
 // rules:
 // - none
 // struct:
-// - String
+// - str
 // algo:
 // - calc the "center" ndx of the str
 // - if the str is odd length

@@ -1,9 +1,7 @@
 function reverseSentence(str) {
-  console.log(str.split(' ').reverse().join(' '));
-
   return str.split(' ').reverse().join(' ');
 }
 
-reverseSentence('');                       // ""
-reverseSentence('Hello World');            // "World Hello"
-reverseSentence('Reverse these words');    // "words these Reverse"
+console.log(reverseSentence(''));                       // ""
+console.log(reverseSentence('Hello World'));            // "World Hello"
+console.log(reverseSentence('Reverse these words'));    // "words these Reverse"

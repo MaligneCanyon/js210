@@ -1,5 +1,5 @@
 function negative(num) {
-  return (num < 0) ? num : -num;
+  return num < 0 ? num : -num;
 }
 
 console.log(negative(5));     // -5

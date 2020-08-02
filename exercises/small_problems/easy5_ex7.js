@@ -1,11 +1,8 @@
-// function swapName(str) {
-//   let arr = str.split(' ');
-
-//   return `${arr[1]}, ${arr[0]}`;
-// }
-
-// from the Solution ...
 function swapName(str) {
+  // let [firstName, lastName] = str.split(' ');
+  // return `${lastName}, ${firstName}`;
+
+  // from the Solution ...
   return str.split(' ').reverse().join(', ');
 }
 

@@ -1,7 +1,7 @@
 function reverseWords(str) {
   let arr = str.split(' ');
 
-  return arr.map(word => (word.length < 5) ? word : word.split('').reverse().join('')).join(' ');
+  return arr.map(word => word.length < 5 ? word : word.split('').reverse().join('')).join(' ');
 }
 
 console.log(reverseWords('Professional'));             // "lanoisseforP"

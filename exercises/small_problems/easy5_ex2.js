@@ -1,17 +1,10 @@
 function doubleConsonants(str) {
-  let newStr = '';
-  let lowStr = str.toLowerCase();
-
-  for (let i = 0; i < str.length; i++) {
-    newStr += str[i];
-    if ('bcdfghjklmnpqrstvwxz'.includes(lowStr[i])) newStr += str[i];
-  }
-
-  console.log(newStr);
-  return newStr;
+  return str.split('').map(char => {
+    return /[kbcdfghjklmnpqrstvwxyz]/i.test(char) ? char + char : char;
+  }).join('');
 }
 
-doubleConsonants('String');          // "SSttrrinngg"
-doubleConsonants('Hello-World!');    // "HHellllo-WWorrlldd!"
-doubleConsonants('July 4th');        // "JJullyy 4tthh"
-doubleConsonants('');                // ""
+console.log(doubleConsonants('String'));          // "SSttrrinngg"
+console.log(doubleConsonants('Hello-World!'));    // "HHellllo-WWorrlldd!"
+console.log(doubleConsonants('July 4th'));        // "JJullyy 4tthh"
+console.log(doubleConsonants(''));                // ""
