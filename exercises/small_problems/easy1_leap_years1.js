@@ -1,6 +1,7 @@
 function isLeapYear(year) {
   if (year < 1 || isNaN(year)) return 'err';
-  return (year % 400 === 0) || (year % 100 !== 0 && year % 4 === 0);
+  // return (year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0)); // works ok ...
+  return (year % 400 === 0) || (year % 100 !== 0 && year % 4 === 0); // works too ...
 }
 
 console.log(isLeapYear(2016));      // true

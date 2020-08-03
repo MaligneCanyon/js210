@@ -30,6 +30,14 @@ function multisum(num) {
   return sum;
 }
 
+// function multisum(num) {
+//   let arr = [];
+//   for (let i = 1; i <= num; i++) {
+//     if (i % 3 === 0 || i % 5 === 0) arr.push(i);
+//   }
+//   return arr.reduce((accum, elem) => accum + elem);
+// }
+
 console.log(multisum(3));       // 3
 console.log(multisum(5));       // 8
 console.log(multisum(10));      // 33
