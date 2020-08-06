@@ -35,10 +35,11 @@
 
 function featured(num) {
   const MAX_FEATURED_NUM = 9876543201;
-  var i;
+  let i;
 
   if (num < MAX_FEATURED_NUM) {
-    i = num - num % 7; // calc the first multiple of 7 that is <= the current num
+    // i = num - num % 7; // calc the first multiple of 7 that is <= the current num
+    i = Math.floor(num / 7) * 7; // calc the first multiple of 7 that is <= the current num
     i += (i % 2) ? 14 : 7; // calc the next odd num that is a multiple of 7
     // console.log(`i === ${i}`);
     for (; i <= MAX_FEATURED_NUM; i += 14) { // only chk odd nums that are multiples of 7
@@ -60,17 +61,22 @@ console.log(featured(9876543200));   // 9876543201
 console.log(featured(9876543202));   // undefined
 
 // determine whether the digits in a num are unique
-function hasUniqueDigits(num) {
-  for (let i = 0; i < 10; i++) {
-    pattern = new RegExp(String(i), 'g');
-    arr = String(num).match(pattern);
-    // console.log(arr);
-    if ((arr || []).length > 1) { // duplicate digits
-      return false;
-    }
-  }
+// function hasUniqueDigits(num) {
+//   for (let i = 0; i < 10; i++) {
+//     pattern = new RegExp(String(i), 'g');
+//     arr = String(num).match(pattern);
+//     // console.log(arr);
+//     if ((arr || []).length > 1) { // duplicate digits
+//       return false;
+//     }
+//   }
 
-  return true;
+//   return true;
+// }
+function hasUniqueDigits(num) {
+  let counterArr = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+  String(num).split('').map(Number).forEach(digit => counterArr[digit]++);
+  return counterArr.every(elem => elem <= 1);
 }
 
 console.log(hasUniqueDigits(12));         // true

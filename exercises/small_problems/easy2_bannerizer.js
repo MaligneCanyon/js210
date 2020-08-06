@@ -7,8 +7,8 @@
 // - log the str w/i a box
 // rules:
 // - box has 5 lines, composed as follows
-//   - 1st and 5th lines: plus sign, str.size + 2 minus signs, plus sign
-//   - 2nd and 4th lines: pipe, str.size + 2 spaces, pipe
+//   - 1st and 5th lines: plus sign, str.length + 2 minus signs, plus sign
+//   - 2nd and 4th lines: pipe, str.length + 2 spaces, pipe
 //   - 3rd line: pipe, space, input str, space, pipe
 // struct:
 // - str

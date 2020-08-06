@@ -19,45 +19,38 @@
 //   - convert the value to a percentage of total chars
 // - rtn the output obj
 
-// function letterCaseCount(str) {
-//   let obj = { 'lowercase': 0, 'uppercase': 0, 'neither': 0 };
-//   const ALPHABET = 'abcdefghijklmnopqrstuvwxyz';
-//   str.split('').forEach(char => {
-//     if (ALPHABET.includes(char)) {
-//       obj.lowercase++;
-//     } else if (ALPHABET.toUpperCase().includes(char)) {
-//       obj.uppercase++;
-//     } else {
-//       obj.neither++;
-//     }
-//   });
-//   // console.log(obj);
-//   return obj;
-// }
+function letterPercentages(str) {
+  let obj = { lowercase: 0, uppercase: 0, neither: 0 };
+  let factor = str.length / 100;
 
-// function letterPercentages(str) {
-//   let obj = letterCaseCount(str);
-//   let arr = Object.entries(obj);
-//   // console.log(arr);
-//   arr.forEach(subarr => {
-//     obj[subarr[0]] = (subarr[1] / str.length * 100).toFixed(2);
-//   });
-//   return obj;
-// }
+  let arr = str.split('');
+  arr.forEach(char => {
+    if (/[a-z]/.test(char)) obj.lowercase++;
+    else if (/[A-Z]/.test(char)) obj.uppercase++;
+    else obj.neither++;
+  });
+
+  for (key in obj) {
+    obj[key] = (obj[key] / factor).toFixed(2);
+  }
+
+  return obj;
+}
 
 
 // from the Solution ...
-function formatAsPercentage(str, pattern) {
-  return ((str.match(pattern) || []).length / str.length * 100).toFixed(2);
-}
+// function formatAsPercentage(str, pattern) {
+//   return ((str.match(pattern) || []).length / str.length * 100).toFixed(2);
+// }
 
-function letterPercentages(str) {
-  return {
-    lowercase: formatAsPercentage(str, /[a-z]/g),
-    uppercase: formatAsPercentage(str, /[A-Z]/g),
-    neither:   formatAsPercentage(str, /[^a-z]/gi),
-  };
-}
+// function letterPercentages(str) {
+//   return {
+//     lowercase: formatAsPercentage(str, /[a-z]/g),
+//     uppercase: formatAsPercentage(str, /[A-Z]/g),
+//     neither:   formatAsPercentage(str, /[^a-z]/gi),
+//   };
+// }
+
 
 console.log(letterPercentages('abCdef 123'));
 // { lowercase: "50.00", uppercase: "10.00", neither: "40.00" }

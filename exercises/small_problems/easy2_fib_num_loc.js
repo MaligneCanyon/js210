@@ -5,7 +5,7 @@
 // reqs:
 // - calc and rtn the ndx of 1st fib num w/ the specified num of digits
 // rules:
-// - 1st fib num has ndx == 1
+// - 1st fib num has ndx === 1
 // - Fib(n) = Fib(n-2) + Fib(n-1)
 // - input num is always >= 2
 // - fib nums == [0, 1, 1, 2, 3, 5, 8]

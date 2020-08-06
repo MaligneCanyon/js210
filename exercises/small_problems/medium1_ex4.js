@@ -1,12 +1,12 @@
 // inputs:
-// - String (the ops to perform)
+// - str (the ops to perform)
 // outputs:
-// - Integer (the result of the op)
+// - int (the result of the op)
 // reqs:
 // - implement a stack using push and pop methods
 //   - use a 'register' to rep the current value
 //   - for a given op, pop most recently pushed value from the stack, perform the op on that and the
-//     the register value, and store the result in the register
+//     register value, and store the result in the register
 // - all ops are integer based
 // - take a str as an arg (spec'ing the operands and the ops to perform)
 // - init the reg to 0 and the stack to []
@@ -16,7 +16,7 @@
 // - arr (to hold list of cmds)
 // algo:
 // - init a reg (int) to 0
-// - init a stack (array) of ints to []
+// - init a stack (arr) of ints to []
 // - split the cmd str into an arr of cmds
 // - for each cmd
 //   - perform the spec'd op

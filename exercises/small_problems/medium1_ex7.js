@@ -1,16 +1,13 @@
 function fibonacci(n) {
-  var i = 3;
-  var fib;
-  var fibOld = 1;
-  var fibNew = 1;
+  let arr = [1, 1];
+  let fib;
 
   if (n < 1) return 0;
   if (n < 3) return 1;
 
-  for (; i <= n; i++) {
-    fib = fibOld + fibNew;
-    fibOld = fibNew;
-    fibNew = fib;
+  for (let ndx = 3; ndx <= n; ndx++) {
+    fib = arr[0] + arr[1];
+    arr = [arr[1], fib];
   }
 
   return fib;

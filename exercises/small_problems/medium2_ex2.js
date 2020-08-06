@@ -16,15 +16,14 @@
 // - arr
 // algo:
 // - place the input lengths in an arr
-// - sort the arr numerically
+// - sort the arr numerically in ascending order
 // - apply the rules to determine the type of triangle
 // - rtn the triangle type
 
 // function triangle(s1, s2, s3) {
-//   var arr = [s1, s2, s3].sort((a, b) => { return a - b; });
+//   let arr = [s1, s2, s3].sort((a, b) => a - b);
 function triangle(...arr) { // use the rest param
-  arr.sort((a, b) => { return a - b; });
-  // console.log(arr);
+  arr.sort((a, b) => a - b);
   if (arr[0] <= 0 || arr[0] + arr[1] <= arr[2]) return 'invalid';
   if (arr[0] === arr[2]) return 'equilateral';
   if (arr[0] === arr[1] || arr[1] === arr[2]) return 'isosceles';

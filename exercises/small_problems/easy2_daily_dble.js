@@ -11,15 +11,17 @@
 // algo:
 // - init a newStr to ''
 // - for each char in the input str
-//   - if the next char is not the same as the current char
+//   - if the current char is not the same as the previous char
 //     - add the current char to the newStr
 // - rtn the newStr
 
 function crunch(str) {
   let newStr = '';
-  for (i = 0; i < str.length; i++) {
-    if (str[i] !== str[i + 1]) newStr += str[i];
+
+  for (let i = 0; i < str.length; i++) {
+    if (!i || str[i] !== str[i - 1]) newStr += str[i];
   }
+
   return newStr;
 }
 

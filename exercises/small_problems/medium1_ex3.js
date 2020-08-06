@@ -20,9 +20,9 @@
 // - rtn the new num
 
 function rotateRightmostDigits(num, digits) {
-  var str = String(num);
-  var endStr = str.slice(-digits);
-  var beginStr = str.slice(0, str.length - digits);
+  let str = String(num);
+  let endStr = str.slice(-digits);
+  let beginStr = str.slice(0, str.length - digits);
 
   endStr = endStr.slice(1).concat(endStr[0]);
   str = beginStr.concat(endStr);
@@ -30,9 +30,7 @@ function rotateRightmostDigits(num, digits) {
 }
 
 function maxRotation(num) {
-  var i = String(num).length;
-
-  for (; i > 1; i--) {
+  for (let i = String(num).length; i > 1; i--) {
     num = rotateRightmostDigits(num, i);
     // console.log(num, i);
   }

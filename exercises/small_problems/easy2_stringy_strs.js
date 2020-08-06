@@ -1,15 +1,23 @@
+// algo:
+// - init a str to ''
+// - ndx times
+//   - if ndx is odd
+//     - append a '0' to the str
+//   - else
+//     - append a '1' to the str
+// - rtn the str
+
 function stringy(num) {
   let str = '';
 
-  for (i = 0; i < num; i++) {
-    str += (i % 2) ? '0' : '1';
+  for (let ndx = 0; ndx < num; ndx++) {
+    str += ndx % 2 ? '0' : '1';
   }
 
-  console.log(str);
   return str;
 }
 
-stringy(6);    // "101010"
-stringy(9);    // "101010101"
-stringy(4);    // "1010"
-stringy(7);    // "1010101"
+console.log(stringy(6));    // "101010"
+console.log(stringy(9));    // "101010101"
+console.log(stringy(4));    // "1010"
+console.log(stringy(7));    // "1010101"

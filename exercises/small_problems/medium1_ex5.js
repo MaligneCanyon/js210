@@ -20,31 +20,37 @@
 //     - replace each occurence of the word w/ the corresponding digit
 // - rtn the new str
 
+// function wordToDigit(str) {
+//   const WORD_TO_DIGIT = {
+//     'zero':  '0',
+//     'one':   '1',
+//     'two':   '2',
+//     'three': '3',
+//     'four':  '4',
+//     'five':  '5',
+//     'six':   '6',
+//     'seven': '7',
+//     'eight': '8',
+//     'nine':  '9',
+//   };
+//   let pattern;
+
+//   Object.keys(WORD_TO_DIGIT).forEach(word => {
+//     // from the Solution ...
+//     // pattern = new RegExp(word, 'g'); // doesn't work well with strs that include 'none' or 'weight' for ex.
+//     pattern = new RegExp('\\b' + word + '\\b', 'g'); // create a new regex pattern for each word
+//     str = str.replace(pattern, WORD_TO_DIGIT[word]);
+//   });
+
+//   return str;
+// }
+
 function wordToDigit(str) {
-  const WORD_TO_DIGIT = {
-    'zero':  '0',
-    'one':   '1',
-    'two':   '2',
-    'three': '3',
-    'four':  '4',
-    'five':  '5',
-    'six':   '6',
-    'seven': '7',
-    'eight': '8',
-    'nine':  '9',
-  };
-  var pattern;
+  const NUM_STRS = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
 
-  Object.keys(WORD_TO_DIGIT).forEach(word => {
-    // while (str.includes(word)) {
-    //   str = str.replace(word, WORD_TO_DIGIT[word]);
-    //   // console.log(str);
-    // }
-
-    // from the Solution ...
-    // pattern = new RegExp(word, 'g'); // doesn't work well with strs that include 'none' or 'weight' for ex.
-    pattern = new RegExp('\\b' + word + '\\b', 'g'); // create a new regex pattern for each word
-    str = str.replace(pattern, WORD_TO_DIGIT[word]);
+  NUM_STRS.forEach(numStr => {
+    let regex = new RegExp(`\\b${numStr}\\b`, 'g');
+    str = str.replace(regex, String(NUM_STRS.indexOf(numStr)));
   });
 
   return str;

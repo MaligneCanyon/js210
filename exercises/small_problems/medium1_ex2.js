@@ -14,14 +14,13 @@
 // - slice off the last n chars of the str (save both the beginStr and endStr substrs)
 // - rotate the chars of the endStr substr
 // - join the beginStr and rotated endStr substrs to form a new str
-// - convert the new str to a new num
+// - convert the new str to a new nume
 // - rtn the new num
 
-
 function rotateRightmostDigits(num, digits) {
-  var str = String(num);
-  var endStr = str.slice(-digits);
-  var beginStr = str.slice(0, str.length - digits);
+  let str = String(num);
+  let endStr = str.slice(-digits);
+  let beginStr = str.slice(0, str.length - digits);
   // console.log(str, beginStr, endStr);
 
   endStr = endStr.slice(1).concat(endStr[0]);
