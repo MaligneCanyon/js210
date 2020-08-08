@@ -4,10 +4,8 @@ function merge(arr1, arr2) {
   arr1 = arr1.slice();
   arr2 = arr2.slice();
 
-  while (arr1.length > 0 || arr2.length > 0) {
-    if (arr1.length === 0) newArr.push(arr2.shift());
-    else if (arr2.length === 0 || arr1[0] < arr2[0]) newArr.push(arr1.shift());
-    else newArr.push(arr2.shift());
+  while (arr1.length || arr2.length) {
+    newArr.push((!arr1.length || arr2[0] <= arr1[0]) ? arr2.shift() : arr1.shift());
   }
 
   return newArr;
@@ -20,29 +18,29 @@ function merge(arr1, arr2) {
 // [1, 5, 7, 9]
 
 // inputs:
-// - Array (unsorted arr)
+// - arr (unsorted)
 // outputs:
-// - Array (sorted arr)
+// - arr (sorted)
 // reqs:
 // - sort an arr containing one type of data (all nums or all strs)
 // - recursive sorting
 // struct:
-// - Array (to hold subarrs)
+// - arr (to hold subarrs)
 // algo:
-// - rtn the arr if the arr only contains zero or one element; otherwise,
+// - rtn the arr if the arr only contains zero or one elem; otherwise,
 // - split the arr into two subarrs
 // - call mergeSort on each of the two subarrs
 // - after the arr has been fully broken down,
-//   call merge to sort and recombine the subarr elements
-//   - rtn the recombined subarrs
+//   call merge to sort and recombine the subarr elems
+// - rtn the recombined subarrs
 
 function mergeSort(arr) {
-  var splitNdx = Math.floor(arr.length / 2);
-  var subarr1;
-  var subarr2;
+  let splitNdx = Math.floor(arr.length / 2);
+  let subarr1;
+  let subarr2;
 
   // console.log(`arr === [${arr}]`);
-  if (arr.length === 1) return arr;
+  if (arr.length <= 1) return arr;
 
   subarr1 = arr.slice(0, splitNdx);
   subarr2 = arr.slice(splitNdx);

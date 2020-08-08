@@ -19,21 +19,35 @@
 //   - push the subArr into the newArr
 // - rtn the newArr
 
-function transpose(arr) {
-  var newArr = [];
-  var subArr;
-  var rows = arr.length;
-  var cols = arr[0].length;
-  var row;
-  var col;
+// function transpose(arr) {
+//   var newArr = [];
+//   var subArr;
+//   var rows = arr.length;
+//   var cols = arr[0].length;
+//   var row;
+//   var col;
+//   for (col = 0; col < cols; col++) {
+//     subArr = [];
+//     for (row = 0; row < rows; row++) {
+//       subArr.push(arr[row][col]);
+//     }
+//     newArr.push(subArr);
+//   }
+//   return newArr;
+// }
 
-  for (col = 0; col < cols; col++) {
-    subArr = [];
-    for (row = 0; row < rows; row++) {
-      subArr.push(arr[row][col]);
-    }
-    newArr.push(subArr);
-  }
+function transpose(arr) {
+  let newArr = [];
+  let newArrRows = arr[0].length;
+  while (newArrRows --> 0) newArr.push([]);
+  // console.log(newArr);
+
+  arr.forEach((subArr, row) => {
+    subArr.forEach((subElem, col) => {
+      // console.log(`row=${row}, col=${col}, ${arr[row][col]}`);
+      newArr[col][row] = arr[row][col];
+    });
+  });
 
   return newArr;
 }

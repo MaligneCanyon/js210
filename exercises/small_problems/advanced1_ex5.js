@@ -28,10 +28,10 @@ function merge(arr1, arr2) {
   arr1 = arr1.slice();
   arr2 = arr2.slice();
 
-  while (arr1.length > 0 || arr2.length > 0) {
-    if (arr1.length === 0) newArr.push(arr2.shift());
-    else if (arr2.length === 0 || arr1[0] < arr2[0]) newArr.push(arr1.shift());
-    else newArr.push(arr2.shift());
+  while (arr1.length || arr2.length) {
+    // if (!arr1.length || arr2[0] <= arr1[0]) newArr.push(arr2.shift());
+    // else /*if (!arr2.length || arr1[0] < arr2[0])*/ newArr.push(arr1.shift());
+    newArr.push((!arr1.length || arr2[0] <= arr1[0]) ? arr2.shift() : arr1.shift());
   }
 
   return newArr;

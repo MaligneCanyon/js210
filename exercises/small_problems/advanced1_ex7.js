@@ -6,11 +6,10 @@
 // If the middle value is greater than 'Pizzeria', do the same as the previous step, but with opposite halves.
 
 function binarySearch(arr, searchItem) {
-  var midPoint;
-  var startNdx = 0;
+  let startNdx = 0;
 
   while (true) {
-    midPoint = Math.floor(arr.length / 2);
+    let midPoint = Math.floor(arr.length / 2);
     if (arr[midPoint] === searchItem) return startNdx + midPoint;
     if (arr.length <= 1) return -1;
     if (arr[midPoint] < searchItem) {

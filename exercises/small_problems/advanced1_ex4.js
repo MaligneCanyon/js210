@@ -19,7 +19,7 @@
 //   - push the subArr into the newArr
 // - rtn the newArr
 
-// Note: v.sim to the transpose() fn from advanced1_ex2-3
+// Note: v.sim to the transpose() fn from advanced1_ex2-3 ...
 function rotate90(arr) {
   var newArr = [];
   var subArr;
@@ -30,9 +30,10 @@ function rotate90(arr) {
 
   for (col = 0; col < cols; col++) {
     subArr = [];
-    for (row = rows - 1; row >= 0; row--) { // this is the only line that differs
+    for (row = rows - 1; row >= 0; row--) { // ... this is the only line that differs
       subArr.push(arr[row][col]);
     }
+
     newArr.push(subArr);
   }
 
