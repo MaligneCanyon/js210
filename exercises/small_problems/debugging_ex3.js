@@ -33,7 +33,7 @@ var firstNoun  = ['Power', 'After Work', 'Holiday', 'Disco', 'Late Night'];
 var secondNoun = ['Mix', 'Delight', 'Bowl', 'Chunk', 'Surprise', 'Bliss'];
 
 // Generate!
-// '+' does not concat arrays !!! use arr.concat() instead
+// '+' does not concat arrays; use arr.concat() instead
 // var dishName = random(adjective) + random(firstNoun) + random(secondNoun);
 // var dish = random(ingredients, 3) + random(spices, 2) + random(extras, 1);
 var dishName = [].concat(random(adjective), random(firstNoun), random(secondNoun));

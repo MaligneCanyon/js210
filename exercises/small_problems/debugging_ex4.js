@@ -15,10 +15,12 @@ function completeTasks(n = 1) {
   while (todos.length > 0 && tasksComplete < n) {
     console.log(todos[0] + ' complete!');
 
-    // delete(arr[ndx]) changes the value of the spec'd elem to undefined,
-    // but does not remove it from tha arr; use arr.shift() instead
+    // delete arr[ndx] changes the value of the spec'd elem to undefined,
+    // but does not remove it from the arr; use arr.shift() instead
+
     // delete todos[0];
     todos.shift();
+    // todos.splice(0, 1); // also works
 
     tasksComplete++;
   }

@@ -19,9 +19,12 @@
 // - range recursively calls itself, but has no ending condition, so stack
 // space is rapidly consumed
 // - to fix, combine the desired fn'ality in a single fn
+// - also, foolhardy to use an arr w/ the same name as the fn w/i which it
+// is scoped
 
 function range(start, end) {
-  var range = [];
+  // var range = [];
+  var strange = [];
   var element;
 
   if (end === undefined) { // no 2nd arg provided
@@ -30,10 +33,12 @@ function range(start, end) {
   }
 
   for (element = start; element <= end; element++) {
-    range.push(element);
+    // range.push(element);
+    strange.push(element);
   }
 
-  return range;
+  // return range;
+  return strange;
 }
 
 console.log(range(10, 20)); // [10..20]

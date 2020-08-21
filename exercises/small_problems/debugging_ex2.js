@@ -16,9 +16,10 @@ var RESERVED_KEYWORDS = ['break', 'case', 'catch', 'class', 'const', 'continue',
 //   return false;
 // }
 
-// The 'return true' statement only serves as the return value from the
-// forEach cb fn (and w/ fo rEach, the return value is ignored); it does not
-// provide a return statement for the isReserved fn
+// The 'return true' statement is the rtn statement of the forEach cb fn;
+// it is not a rtn statement for the isReserved fn.
+// Also, w/ forEach, any rtn value is ignored and all elems are iterated
+// regardless.
 
 // refactored ...
 function isReserved(name) {

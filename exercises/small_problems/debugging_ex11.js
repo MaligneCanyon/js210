@@ -6,7 +6,7 @@ var minutes = 0;
 function pomodoro() {
   console.log('Work.');
 
-  console.log(minutes); // line X; undefined !
+  console.log(minutes); // line X; 'minutes' is undefined !
   while (minutes < 25) {
     minutes += 1;
     console.log('...' + minutes);
@@ -32,8 +32,9 @@ function pomodoro() {
 
   console.log('Rest for ' + rest + ' minutes.');
 
-  // re-defs 'minutes'; the declaration is hoisted, the init (or assignment) is not
-  // so minutes is undefined at line X
+  // 'var minutes = 0;' re-defs 'minutes'; the declaration is hoisted, the
+  // init (or assignment) is not, so minutes is undefined at line X (above)
+
   // var minutes = 0;
   minutes = 0;
   pomodoro();

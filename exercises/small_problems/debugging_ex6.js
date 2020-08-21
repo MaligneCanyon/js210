@@ -31,6 +31,8 @@ function addMember(name, phone) {
 addMember('Laura Carlisle', '444-2223');
 addMember('Rachel Garcia', '232-1191');
 addMember('Earl 5mith', '331-9191');
-addMember('Eddy _mith', '888-9222');
+addMember('Earl _mith', '331-9191');
+addMember('Earl Smith', '331-9191');
+addMember('Emma Sims', '123-456');
 
 console.log(memberDirectory);

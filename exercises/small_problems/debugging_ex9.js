@@ -14,7 +14,8 @@ function median(nums) {
   // lexographically; must spec a cb to sort numerically
 
   // nums.sort();
-  nums.sort(function(a, b) { return a - b; });
+  nums.sort((a, b) => a - b);
+  // nums.sort(function(a, b) { return a - b; }); // works too ...
 
   if (length % 2 === 0) {
     median = average([nums[(length / 2) - 1], nums[length / 2]]);
